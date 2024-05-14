@@ -9,6 +9,13 @@ root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  // <Provider store={store}>
+  //   <PersistGate loading={null} persistor={persistor}>
+  //     <BrowserRouter basename="/ReactAvengers">
+  //       <App />
+  //     </BrowserRouter>
+  //   </PersistGate>
+  // </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
