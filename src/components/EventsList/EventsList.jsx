@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getEvents } from '../../redux/events/operations';
 import { selectEvents, selectIsLoading } from '../../redux/events/eventsSlice';
+import { StyleCard, StyleCardText, StyleCardTitle, StyleEventsLi, StyleEventsListContainer, StyleEventsTitle, StyleEventsUl, StyleRegisterBtn } from './EventsList.styled';
 
 export const EventsList = () => {
   const dispatch = useDispatch();
@@ -14,22 +15,22 @@ export const EventsList = () => {
   }, [dispatch]);
 
   return (
-    <div >
-        <p>Events</p>
-      <ul>
+    <StyleEventsListContainer >
+        <StyleEventsTitle>Events</StyleEventsTitle>
+      <StyleEventsUl>
         {eventsItems.map(event => (
-          <li key={event.id}>
-            <div>
-                <p>{event.title}</p>
-                <p>{event.description}</p>
-                <button>Register</button>
+          <StyleEventsLi key={event.id}>
+            <StyleCard>
+                <StyleCardTitle>{event.title}</StyleCardTitle>
+                <StyleCardText>{event.description}</StyleCardText>
+                <StyleRegisterBtn>Register</StyleRegisterBtn>
                 <button>View</button>
-            </div>
+            </StyleCard>
             
-          </li>
+          </StyleEventsLi>
         ))}
-      </ul>
+      </StyleEventsUl>
       {isLoading && <h1>Loading.....</h1>}
-    </div>
+    </StyleEventsListContainer>
   );
 };
