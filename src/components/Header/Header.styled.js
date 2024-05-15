@@ -5,7 +5,7 @@ display: block;
 margin: 20px 0 20px 20px ;
 font-size: 30px;
 font-weight: 500;
-color: rgb(114 31 79);
+color: rgb(206 22 130);
 `;
 
 export const StyleLine = styled.div`
