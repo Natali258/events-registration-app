@@ -9,7 +9,6 @@ export const EventsList = () => {
   const dispatch = useDispatch();
   const eventsItems = useSelector(selectEvents);
   console.log(...eventsItems);
-  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(getEvents());
