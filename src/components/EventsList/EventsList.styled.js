@@ -29,10 +29,10 @@ background-color: rgb(211 211 211);;
 
 export const StyleCard = styled.div`
 display: block;
+position:relative;
 width: 100%;
 height: 100%;
 padding: 20px;
-
 `;
 
 export const StyleCardTitle = styled.p`
@@ -50,13 +50,34 @@ font-weight: 500;
 `;
 
 export const StyleRegisterBtn = styled.button`
-display: inline-block;
 font-size: 13px;
 padding: 5px 10px 5px 10px;
 background-color: rgb(206 22 130);
 border: none;
 border-radius: 10px;
 
-
+&:hover {
+background-color: #a10b63; 
+}
 `;
 
+export const StyleViewBtn = styled.button`
+font-size: 13px;
+padding: 5px 10px 5px 10px;
+background-color: rgb(206 22 130);
+border: none;
+border-radius: 10px;
+
+&:hover {
+background-color: #a10b63; 
+}
+`;
+
+export const StyleBtnUl = styled.ul`
+display: flex;
+position: absolute;
+top: 74%;
+margin-top: auto;
+flex-direction: row;
+gap: 20px;
+`;

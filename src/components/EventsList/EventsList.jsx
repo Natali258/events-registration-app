@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getEvents } from '../../redux/events/operations';
 import { selectEvents, selectIsLoading } from '../../redux/events/eventsSlice';
-import { StyleCard, StyleCardText, StyleCardTitle, StyleEventsLi, StyleEventsListContainer, StyleEventsTitle, StyleEventsUl, StyleRegisterBtn } from './EventsList.styled';
+import { StyleBtnUl, StyleCard, StyleCardText, StyleCardTitle, StyleEventsLi, StyleEventsListContainer, StyleEventsTitle, StyleEventsUl, StyleRegisterBtn, StyleViewBtn } from './EventsList.styled';
 
 export const EventsList = () => {
   const dispatch = useDispatch();
@@ -23,9 +23,12 @@ export const EventsList = () => {
             <StyleCard>
                 <StyleCardTitle>{event.title}</StyleCardTitle>
                 <StyleCardText>{event.description}</StyleCardText>
-                <StyleRegisterBtn>Register</StyleRegisterBtn>
-                <button>View</button>
+                <StyleBtnUl>
+                  <li><StyleRegisterBtn>Register</StyleRegisterBtn></li>
+                  <li><StyleViewBtn>View</StyleViewBtn></li>
+                </StyleBtnUl>
             </StyleCard>
+            
             
           </StyleEventsLi>
         ))}
