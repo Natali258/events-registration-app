@@ -24,7 +24,7 @@ display: block;
 width: 270px;
 height: 180px;
 border-radius: 10px;
-background-color: rgb(211 211 211);;
+background-color: rgb(211 211 211);
 `;
 
 export const StyleCard = styled.div`

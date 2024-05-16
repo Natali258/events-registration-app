@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { getEvents } from '../../redux/events/operations';
 import { selectEvents, selectIsLoading } from '../../redux/events/eventsSlice';
 import { StyleBtnUl, StyleCard, StyleCardText, StyleCardTitle, StyleEventsLi, StyleEventsListContainer, StyleEventsTitle, StyleEventsUl, StyleRegisterBtn, StyleViewBtn } from './EventsList.styled';
+import { Link } from 'react-router-dom';
 
 export const EventsList = () => {
   const dispatch = useDispatch();
@@ -24,8 +25,8 @@ export const EventsList = () => {
                 <StyleCardTitle>{event.title}</StyleCardTitle>
                 <StyleCardText>{event.description}</StyleCardText>
                 <StyleBtnUl>
-                  <li><StyleRegisterBtn>Register</StyleRegisterBtn></li>
-                  <li><StyleViewBtn>View</StyleViewBtn></li>
+                  <li><Link to="/register"><StyleRegisterBtn>Register</StyleRegisterBtn></Link></li>
+                  <li><Link to="/view"><StyleViewBtn>View</StyleViewBtn></Link></li>
                 </StyleBtnUl>
             </StyleCard>
             
@@ -33,7 +34,6 @@ export const EventsList = () => {
           </StyleEventsLi>
         ))}
       </StyleEventsUl>
-      {isLoading && <h1>Loading.....</h1>}
     </StyleEventsListContainer>
   );
 };
