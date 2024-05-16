@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getEvents } from '../../redux/events/operations';
-import { selectEvents, selectIsLoading } from '../../redux/events/eventsSlice';
+import { selectEvents} from '../../redux/events/eventsSlice';
 import { StyleBtnUl, StyleCard, StyleCardText, StyleCardTitle, StyleEventsLi, StyleEventsListContainer, StyleEventsTitle, StyleEventsUl, StyleRegisterBtn, StyleViewBtn } from './EventsList.styled';
 import { Link } from 'react-router-dom';
 
